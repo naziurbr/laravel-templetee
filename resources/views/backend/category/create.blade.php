@@ -71,20 +71,32 @@
         <div class="col-lg-12">
           <div class="card card-outline">
             <div class="card-header bg-blue">
-              <h5 class="text-white m-b-0">Category Form</h5>
+              <h5 class="text-white m-b-0">Category Entry Form</h5>
             </div>
-            <div class="card-body">
-              <form method="post" action="{{route('category.store')}}">
-                @csrf
-              <div class="form-group">
-                <label for="exampleInputEmail1">Category</label>
-                <input type="text" class="cat_name" name="cat_name" id="exampleInputEmail1" placeholder="Category Name">
-              </div>
-      
-              <button type="submit" class="btn btn-success">Submit</button>
-            </form>
+           <div class="card-body">
+    @if($errors->any())
+
+        <div class="alert alert-danger">
+            <div>
+                @foreach($errors->all() as $error)
+                    <div class="alert alert-danger">{{ $error }}</div>
+                @endforeach
             </div>
-          </div>
+        </div>
+
+    @endif
+
+    <form method="post" action="{{ route('category.store') }}">
+        @csrf
+        <div class="form-group">
+            <label for="exampleInputEmail1">Category</label>
+            <input type="text" class="cat_name" name="cat_name" value="{{ old('cat_name') }}" id="exampleInputEmail1" placeholder="Category Name">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+
         </div>
       </div>
  

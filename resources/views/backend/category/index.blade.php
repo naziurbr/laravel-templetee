@@ -62,9 +62,16 @@
     </div>
     
     <!-- Main content -->
-    <div class="content">
-      <div class="card">
-      <div class="card-body">
+<div class="content">
+  <div class="card">
+    <div class="card-body">
+      @if(session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div>
+      @endif
+
+        
         <h4 class="text-black"><span>Category List</span> <span class="pull-right"><a class="btn  btn-success" href="{{ route('category.create') }}">Add Category</a></span></h4>
         <p>Just add the base class  .</p>
         <div class="table-responsive">
@@ -81,12 +88,17 @@
               @foreach ( $cats as $cat )
 
               <tr>
+                <form action="{{ route('category.destroy', $cat->id) }}" method="post">
+                  @csrf
+                  @method('delete')
                 <th scope="row">{{ $cat->id }}</th>
                 <td>{{ $cat->name }}</td>
                 <td>
-                  <i class="fa fa-pencil btn btn-primary"></i>
-                  <i class="fa fa-trash btn btn-danger"></i>
+                  <a href="{{ route('category.edit',$cat->id) }}" class="btn btn-primary">Edit</a>
+                 
+                  <button type="submit" class="btn btn-danger">Delete</button>
                 </td>
+                 </form>
 
               </tr>
 

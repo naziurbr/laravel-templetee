@@ -33,11 +33,25 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $category = [
+        // validation
+      $request->validate([
+    'cat_name' => 'required|min:3|max:10|unique:categories,name',
+
+      ],
+      [
+        'required' => 'Category namne must be entered',
+        'min' => 'Category name must be at least 3 characters',
+      ]
+        
+    );
+        
+
+        //data
+        $data = [
             'name' => $request->cat_name,
         ];
-        Category :: create ($category);
-        return redirect(('/dashboard'));
+        Category :: create ($data);
+        return redirect()->route('category.index')->with('success','Category Added');
             
       
         // dd($request);
@@ -58,7 +72,8 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('backend.category.edit');
+        return view('backend.category.edit' , compact('category'));
+        
     }
 
     /**
@@ -66,7 +81,29 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        // dd ($category);
+               // validation
+      $request->validate([
+    'cat_name' => 'required|min:3|max:10|unique:categories,name',
+
+      ],
+      [
+        'required' => 'Category namne must be entered',
+        'min' => 'Category name must be at least 3 characters',
+      ]
+        
+    );
+        
+        
+
+
+
+
+        $data = [
+            'name' => $request->cat_name,
+        ];
+        $category->update($data);
+        return redirect()->route('category.index')->with('success','Successfully Updated');
     }
 
     /**
@@ -74,6 +111,8 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+         $category->delete();
+         return redirect()->route('category.index')->with('success','Successfully Deleted');
+
     }
 }

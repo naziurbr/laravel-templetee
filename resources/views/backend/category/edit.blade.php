@@ -14,27 +14,30 @@
 <meta name="keywords" content="admin, admin dashboard, admin template, cms, crm, Biz Admin, Biz Adminadmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application" />
 <meta name="author" content="uxliner"/>
 <!-- v4.1.3 -->
-<link rel="stylesheet" href="dist/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{url('')}}/dist/bootstrap/css/bootstrap.min.css">
 
 <!-- Favicon -->
-<link rel="icon" type="image/png" sizes="16x16" href="dist/img/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{url('')}}/dist/img/favicon-16x16.png">
 
 <!-- Google Font -->
-<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<link href="{{url('')}}/https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
 <!-- Theme style -->
-<link rel="stylesheet" href="dist/css/style.css">
-<link rel="stylesheet" href="dist/css/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="dist/css/et-line-font/et-line-font.css">
-<link rel="stylesheet" href="dist/css/themify-icons/themify-icons.css">
-<link rel="stylesheet" href="dist/css/simple-lineicon/simple-line-icons.css">
-<link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+<link rel="stylesheet" href="{{url('')}}/dist/css/style.css">
+<link rel="stylesheet" href="{{url('')}}/dist/css/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{url('')}}/dist/css/et-line-font/et-line-font.css">
+<link rel="stylesheet" href="{{url('')}}/dist/css/themify-icons/themify-icons.css">
+<link rel="stylesheet" href="{{url('')}}/dist/css/simple-lineicon/simple-line-icons.css">
+<link rel="stylesheet" href="{{url('')}}/dist/css/skins/_all-skins.min.css">
+
+<!-- form wizard -->
+<link rel="stylesheet" href="{{url('')}}/dist/plugins/formwizard/jquery-steps.css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <script src="{{url('')}}/https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="{{url('')}}/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
 </head>
@@ -54,90 +57,50 @@
   <div class="content-wrapper"> 
     <!-- Content Header (Page header) -->
     <div class="content-header sty-one">
-      <h1>Dashboard</h1>
+      <h1 class="text-white">Form Layouts</h1>
       <ol class="breadcrumb">
         <li><a href="#">Home</a></li>
-        <li><i class="fa fa-angle-right"></i> Dashboard</li>
+        <li><i class="fa fa-angle-right"></i> <a href="#">Form</a></li>
+        <li><i class="fa fa-angle-right"></i> Form Layouts</li>
       </ol>
     </div>
     
     <!-- Main content -->
     <div class="content">
       <div class="row">
-        <div class="col-lg-4 col-md-6 m-b-3">
-          <div class="widget-info bg-primary">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-6 text-white">
-                  <p>Total Balance</p>
-                  <h2 class="font-weight-bold">$15,859</h2>
-                  <a href="#">View Statement</a> </div>
-                <div class="col-md-6 m-t-2 text-right"> <span id="spa-bar"></span> </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 m-b-3">
-          <div class="widget-info bg-aqua">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-6 text-white">
-                  <p>Online Revenue</p>
-                  <h2 class="font-weight-bold">$8,859</h2>
-                  <a href="#">View Statement</a> </div>
-                <div class="col-md-6 m-t-2 text-right"> <span id="spa-line"></span> </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 m-b-3">
-          <div class="widget-info bg-danger">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-6 text-white">
-                  <p>Total Profit</p>
-                  <h2 class="font-weight-bold">$85,085</h2>
-                  <a href="#">View Statement</a> </div>
-                <div class="col-md-6 m-t-2 text-right"> <span id="spa-pie"></span> </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /.row -->
-      
-
-      <!-- Revenue Statistics -->
-      <div class="row">
         <div class="col-lg-12">
-          <div class="info-box">
-            <div class="col-12">
-              <h5>Revenue Statistics</h5>
-              <div class="row m-t-2 m-b-2">
-                <div class="col-md-6">
-                  <h1 class="font-weight-500">$23,743</h1>
-                  <p>Total Revenue</p>
-                </div>
-                <div class="col-md-3">
-                  <h6 class="text-blue font-weight-bold">Organic Traffic</h6>
-                  <p class="f-13">+ 40% this month</p>
-                </div>
-                <div class="col-md-3">
-                  <h6 class="text-green font-weight-bold">Page Views</h6>
-                  <p class="f-13">+ 25% this month</p>
-                </div>
-              </div>
+          <div class="card card-outline">
+            <div class="card-header bg-blue">
+              <h5 class="text-white m-b-0">Category Edit Form</h5>
             </div>
-            <div id="earning"></div>
-          </div>
+           <div class="card-body">
+    @if($errors->any())
+
+        <div class="alert alert-danger">
+            <div>
+                @foreach($errors->all() as $error)
+                    <div class="alert alert-danger">{{ $error }}</div>
+                @endforeach
+            </div>
         </div>
 
-      </div>
-      <!-- End Revenue Statistics -->
+    @endif
 
-      <!-- /.row -->
-      <!-- /.row --> 
-    </div>
+    <form method="post" action="{{ route('category.update',$category->id  ) }}">
+        @csrf
+        @method('put')
+        <div class="form-group">
+            <label for="exampleInputEmail1">Category Name</label>
+            <input type="text" name="cat_name" value="{{ old('cat_name', $category->name) }}" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>
+</div>
+
+        </div>
+      </div>
+ 
     <!-- /.content --> 
   </div>
 
@@ -153,23 +116,95 @@
 
 @section("script")
 
-<script src="dist/js/jquery.min.js"></script>  
-<script src="dist/bootstrap/js/bootstrap.min.js"></script> 
+
+
+<script src="{{url('')}}/dist/js/jquery.min.js"></script>  
+<script src="{{url('')}}/dist/bootstrap/js/bootstrap.min.js"></script> 
 
 <!-- template --> 
-<script src="dist/js/bizadmin.js"></script> 
-
-<!-- Jquery Sparklines --> 
-<script src="dist/plugins/jquery-sparklines/jquery.sparkline.min.js"></script> 
-<script src="dist/plugins/jquery-sparklines/sparkline-int.js"></script> 
-
-<!-- Morris JavaScript --> 
-<script src="dist/plugins/raphael/raphael-min.js"></script> 
-<script src="dist/plugins/morris/morris.js"></script> 
-<script src="dist/plugins/functions/dashboard1.js"></script> 
+<script src="{{url('')}}/dist/js/bizadmin.js"></script> 
 
 <!-- for demo purposes --> 
-<script src="dist/js/demo.js"></script>
+<script src="{{url('')}}/dist/js/demo.js"></script>
+
+<!-- form wizard --> 
+<script src="{{url('')}}/dist/plugins/formwizard/jquery-steps.js"></script> 
+<script src="{{url('')}}/https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script> 
+<script>
+    var frmRes = $('#frmRes');
+    var frmResValidator = frmRes.validate();
+	
+    var frmInfo = $('#frmInfo');
+    var frmInfoValidator = frmInfo.validate();
+
+    var frmLogin = $('#frmLogin');
+    var frmLoginValidator = frmLogin.validate();
+
+    var frmMobile = $('#frmMobile');
+    var frmMobileValidator = frmMobile.validate();
+
+    $('#demo1').steps({
+      onChange: function (currentIndex, newIndex, stepDirection) {
+        console.log('onChange', currentIndex, newIndex, stepDirection);
+        // tab1
+        if (currentIndex === 0) {
+          if (stepDirection === 'forward') {
+            var valid = frmRes.valid();
+            return valid;
+          }
+          if (stepDirection === 'backward') {
+            frmResValidator.resetForm();
+          }
+        }
+		
+		// tab2
+        if (currentIndex === 1) {
+          if (stepDirection === 'forward') {
+            var valid = frmInfo.valid();
+            return valid;
+          }
+          if (stepDirection === 'backward') {
+            frmInfoValidator.resetForm();
+          }
+        }
+
+        // tab3
+        if (currentIndex === 2) {
+          if (stepDirection === 'forward') {
+            var valid = frmLogin.valid();
+            return valid;
+          }
+          if (stepDirection === 'backward') {
+            frmLoginValidator.resetForm();
+          }
+        }
+
+        // tab4
+        if (currentIndex === 3) {
+          if (stepDirection === 'forward') {
+            var valid = frmMobile.valid();
+            return valid;
+          }
+          if (stepDirection === 'backward') {
+            frmMobileValidator.resetForm();
+          }
+        }
+
+        return true;
+
+      },
+      onFinish: function () {
+        alert('Wizard Completed');
+      }
+    });
+  </script> 
+<script>
+    $('#demo').steps({
+      onFinish: function () {
+        alert('Wizard Completed');
+      }
+    });
+  </script>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -182,5 +217,6 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+
 
 @endsection
